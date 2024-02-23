@@ -14,9 +14,10 @@ export default class Canvas {
     this.scale = 1
     this.viewport = viewport
     this.resize()
+    window.onresize = this.resize
   }
 
-  resize() {
+  resize = () => {
     this.element.width = innerWidth
     this.element.height = innerHeight
     this.scale = Math.max(innerWidth / this.viewport.w, innerHeight / this.viewport.h)

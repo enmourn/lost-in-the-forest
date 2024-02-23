@@ -4,18 +4,28 @@ export default class Player {
   size: number
   speeds: number[]
   speed: number
+  spin: number
   lives: number[]
   live: number
   angle: number
   confuse: { x: -1 | 1; y: -1 | 1 }
   color: string
 
-  constructor(config: { x: number; y: number; size: number; speeds: number[]; lives: number[]; color: string }) {
+  constructor(config: {
+    x: number
+    y: number
+    size: number
+    speeds: number[]
+    spin: number
+    lives: number[]
+    color: string
+  }) {
     this.x = config.x
     this.y = config.y
     this.size = config.size
     this.speeds = config.speeds
     this.speed = this.speeds[0]
+    this.spin = config.spin
     this.lives = config.lives
     this.live = this.lives[0]
     this.angle = 0

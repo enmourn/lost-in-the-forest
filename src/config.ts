@@ -17,6 +17,7 @@ const config = {
   player: {
     size: 10,
     speeds: [1.5, 1.3, 1.1],
+    spin: 0.01,
     lives: [60 * 60 * 15, 60 * 60 * 8, 60 * 60 * 4],
     color: color.blackLight,
   },
