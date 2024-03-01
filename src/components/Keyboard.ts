@@ -48,10 +48,10 @@ export default class Keyboard {
   }
 
   private updDirection() {
-    this.left = this.a || this.q
-    this.up = this.w || this.q || this.e
-    this.down = this.s
-    this.right = this.d || this.e
+    this.left = this.a || this.arrowLeft || this.q
+    this.up = this.w || this.arrowUp || this.q || this.e
+    this.down = this.s || this.arrowDown
+    this.right = this.d || this.arrowRight || this.e
   }
 
   pressOnce(key: string, callback: () => void) {
